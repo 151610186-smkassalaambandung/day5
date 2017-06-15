@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
+            <div class="panel" style="background-color: rgba(244,250,255,0);">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
     {!! Form::open(['url'=>'/register','class'=>'form-horizontal']) !!}

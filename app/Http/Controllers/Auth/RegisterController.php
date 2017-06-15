@@ -70,6 +70,6 @@ class RegisterController extends Controller
         ]);
         $memberRole = Role::where('name','member')->first();
         $user->attachRole($memberRole);
-        return $user
+        return $user;
     }
 }
