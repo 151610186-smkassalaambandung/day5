@@ -40,5 +40,15 @@ class UsersSeeder extends Seeder
         $member->password = bcrypt('rahasia');
         $member->save();
         $member->attachRole($memberRole);
+
+        //Membuat sample admin
+        $admin->is_verified= 1;
+        $admin->save();
+        $admin->attachRole($adminRole);
+
+        //Membuat sample member
+        $member->is_verified= 1;
+        $member->save();
+        $member->attachRole($memberRole);
     }
 }

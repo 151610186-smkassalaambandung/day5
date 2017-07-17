@@ -54,13 +54,18 @@
                     <ul class="nav navbar-nav">
                         <ul class="nav navbar-nav">
                             @if (Auth::check())
-                                <li><a href="{{ url('/home') }}">Dashboard</a></li>
-
-                            @endif
-                            @role('admin')
-                                <li><a href="{{ route('authors.index') }}">Penulis</a></li>
-                                <li><a href="{{ route('books.index') }}">Buku</a></li>
-                            @endrole
+                        <li><a href="{{ url('/home')}}">Dasboard</a></li>
+                    @endif
+                    @role('admin')
+                      <li><a href="{{ route('authors.index')}}">Penulis</a></li>
+                      <li><a href="{{ route('books.index')}}">Buku</a></li>
+                      <li><a href="{{ route('members.index')}}">Member</a></li>
+                      <li><a href="{{ route('statistics.index')}}">Peminjaman</a></li>
+                      @endrole
+                    @if (auth()->check())
+                      <li><a href="{{ url('/settings/profile') }}">Profil</li>
+                    @endif
+                    </ul>
                         </ul>
                     </ul>
 
